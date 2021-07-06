@@ -10,15 +10,15 @@
 // getEmailDomain("a.wiersma@outlook.com") geeft   outlook.com
 
 function getEmailDomain( email ) {
-    splittedEmail = email.split("@");
+    splittedEmail = email.split( "@" );
     return splittedEmail[1];
 }
 
-const domainName = getEmailDomain("n.eeken@novi-education.nl" );
+const domainName = getEmailDomain( "n.eeken@novi-education.nl" );
 console.log( domainName );
-const domainName1 = getEmailDomain("t.mellink@novi.nl" );
+const domainName1 = getEmailDomain( "t.mellink@novi.nl" );
 console.log( domainName1 );
-const domainName2 = getEmailDomain("a.wiersma@outlook.com" );
+const domainName2 = getEmailDomain( "a.wiersma@outlook.com" );
 console.log( domainName2 );
 
 
@@ -31,23 +31,23 @@ console.log( domainName2 );
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
 function typeOfEmail( emailAdress ) {
-    if ( emailAdress.includes("@novi-education.nl" )) {
+    if ( emailAdress.includes("@novi-education.nl" ) ) {
         return "Student";
-    } else if ( emailAdress.includes("@novi.nl" )) {
+    } else if ( emailAdress.includes("@novi.nl" ) ) {
         return "Medewerker";
     } else {
         return "Extern";
     }
 }
 
-const checkEmail1 = typeOfEmail("n.eeken@novi-education.nl" );
+const checkEmail1 = typeOfEmail( "n.eeken@novi-education.nl" );
 console.log( checkEmail1 );
-const checkEmail2 = typeOfEmail("t.mellink@novi.nl" );
+const checkEmail2 = typeOfEmail( "t.mellink@novi.nl" );
 console.log( checkEmail2 );
-const checkEmail3 = typeOfEmail("novi.nlaapjesk@outlook.com" );
+const checkEmail3 = typeOfEmail( "novi.nlaapjesk@outlook.com" );
 console.log( checkEmail3 );
-const checkEmail4 = typeOfEmail("a.wiersma@outlook.com");
-console.log ( checkEmail4 );
+const checkEmail4 = typeOfEmail( "a.wiersma@outlook.com");
+console.log( checkEmail4 );
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -63,9 +63,9 @@ console.log ( checkEmail4 );
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
 function checkEmailValidity( email ) {
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if ( email.match(mailformat) ) {
+    if ( email.match( mailformat ) ) {
     return true;
     } else {
     return false;
@@ -74,11 +74,11 @@ function checkEmailValidity( email ) {
 
 const validEmail = checkEmailValidity("n.eeken@novi.nl");
 console.log( validEmail );
-const validEmail1 = checkEmailValidity( "tessmellink@novi.nl" );
+const validEmail1 = checkEmailValidity("tessmellink@novi.nl" );
 console.log( validEmail1 );
-const validEmail2 = checkEmailValidity( "n.eekenanovi.nl" );
+const validEmail2 = checkEmailValidity("n.eekenanovi.nl" );
 console.log( validEmail2 );
-const validEmail3 = checkEmailValidity( "n.eeken@novinl." );
+const validEmail3 = checkEmailValidity("n.eeken@novinl." );
 console.log( validEmail3 );
-const validEmail4 = checkEmailValidity( "tessmellink@novi,nl" );
+const validEmail4 = checkEmailValidity("tessmellink@novi,nl" );
 console.log( validEmail4 );

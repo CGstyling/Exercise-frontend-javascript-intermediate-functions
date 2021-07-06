@@ -4,6 +4,8 @@
 
 /* Opdracht  1: Cum Laude */
 
+const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
+
 /* 1a: Script schrijven  */
 // De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
@@ -18,19 +20,17 @@
 //als je er een tegenkomt sla deze op.
 //geef weer hoeveel cijfers met 8 of hoger er zijn
 
-const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
-
 function checkGrades() {
     let cumLaudeNumbers = [];
 
-    for (let i = 0; i < grades.length; i++) {
-        if (grades[i] >= 8) {
-            cumLaudeNumbers.push(grades[i]);
+    for( let i = 0; i < grades.length; i++ ) {
+        if ( grades[i] >= 8 ) {
+            cumLaudeNumbers.push( grades[i] );
         }
     }
     return cumLaudeNumbers.length;
 }
-console.log(checkGrades());
+console.log( checkGrades() );
 // ---- Verwachte uitkomst: 6
 
 
@@ -42,9 +42,9 @@ console.log(checkGrades());
 function cumLaude( cijfers ) {
     let cumLaudeNumbers = [];
 
-    for (let i = 0; i < cijfers.length; i++) {
-        if (cijfers[i] >= 8) {
-            cumLaudeNumbers.push(cijfers[i]);
+    for( let i = 0; i < cijfers.length; i++ ) {
+        if ( cijfers[i] >= 8 ) {
+            cumLaudeNumbers.push( cijfers[i] );
         }
     }
     return cumLaudeNumbers.length;
@@ -81,9 +81,9 @@ function giveAverage() {
   for( let i = 0; i < grades.length; i++ ) {
       sum = grades[i] + sum;
   }
-  return (sum / grades.length);
+  return ( sum / grades.length );
 }
-console.log(giveAverage());
+console.log( giveAverage() );
 // ---- Verwachte uitkomst: 6.642857142857143
 
 
@@ -97,11 +97,11 @@ function averageGrade( numbersAverage ) {
     for( let i = 0; i < numbersAverage.length; i++ ) {
         sum = numbersAverage[i] + sum;
     }
-    return (sum / numbersAverage.length);
+    return ( sum / numbersAverage.length );
 }
-console.log(averageGrade(grades));
-console.log(averageGrade([6, 4, 5]));
-console.log(averageGrade([8, 9, 4, 6, 10]));
+console.log( averageGrade(grades) );
+console.log( averageGrade([6, 4, 5]) );
+console.log( averageGrade([8, 9, 4, 6, 10]) );
 
 // ---- Verwachte uitkomsten:
 // averageGrade(grades) geeft 6.642857142857143
@@ -117,11 +117,11 @@ function averageGrade1( numbersAverage1 ) {
     for( let i = 0; i < numbersAverage1.length; i++ ) {
         sum = numbersAverage1[i] + sum;
     }
-    return Math.round(sum / numbersAverage1.length);
+    return Math.round( sum / numbersAverage1.length );
 }
-console.log(averageGrade1(grades));
-console.log(averageGrade1([6, 4, 5]));
-console.log(averageGrade1([8, 9, 4, 6, 10]));
+console.log( averageGrade1(grades) );
+console.log( averageGrade1([6, 4, 5]) );
+console.log( averageGrade1([8, 9, 4, 6, 10]) );
 
 
 /* Bonusopdracht: hoogste cijfer */
@@ -141,14 +141,14 @@ console.log(averageGrade1([8, 9, 4, 6, 10]));
 
 function findLargest() {
     let largest = 0;
-    for (let i = 0; i <= largest; i++) {
-        if (grades[i] > largest) {
+    for( let i = 0; i <= largest; i++ ) {
+        if ( grades[i] > largest ) {
             largest = grades[i];
         }
     }
     return largest;
 }
-console.log(findLargest());
+console.log( findLargest() );
 
 
 // ---- Verwachte uitkomst: 9
@@ -159,18 +159,18 @@ console.log(findLargest());
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
-function highestGrade(numbersGrades) {
+function highestGrade( numbersGrades ) {
     let largest = 0;
-    for (let i = 0; i <= largest; i++) {
-        if (numbersGrades[i] > largest) {
+    for( let i = 0; i <= largest; i++ ) {
+        if ( numbersGrades[i] > largest ) {
             largest = numbersGrades[i];
         }
     }
     return largest;
 }
-console.log(highestGrade(grades));
-console.log(highestGrade([6, 4, 5]));
-console.log(highestGrade([8, 9, 4, 6, 10]));
+console.log( highestGrade(grades) );
+console.log( highestGrade([6, 4, 5]) );
+console.log( highestGrade([8, 9, 4, 6, 10]) );
 
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
