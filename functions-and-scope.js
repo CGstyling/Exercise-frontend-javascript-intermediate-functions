@@ -116,7 +116,8 @@ function averageGrade1( numbersAverage1 ) {
     let sum = 0 ;
     for( let i = 0; i < numbersAverage1.length; i++ ) {
         sum = numbersAverage1[i] + sum;
-    }
+    } 
+
     return (sum/numbersAverage1.length).toFixed(2);
 }
 console.log( averageGrade1(grades) );
