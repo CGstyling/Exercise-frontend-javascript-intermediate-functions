@@ -79,7 +79,7 @@ console.log( cumLaude([8, 9, 4, 6, 10]) );
 function giveAverage() {
   let sum = 0 ;
   for( let i = 0; i < grades.length; i++ ) {
-      sum = grades[i] + sum;
+      sum += grades[i];
   }
   return ( sum / grades.length );
 }
@@ -117,7 +117,7 @@ function averageGrade1( numbersAverage1 ) {
     for( let i = 0; i < numbersAverage1.length; i++ ) {
         sum = numbersAverage1[i] + sum;
     }
-    return Math.round( sum / numbersAverage1.length );
+    return (sum/numbersAverage1.length).toFixed(2);
 }
 console.log( averageGrade1(grades) );
 console.log( averageGrade1([6, 4, 5]) );
