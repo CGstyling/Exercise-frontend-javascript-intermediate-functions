@@ -64,10 +64,7 @@ console.log( checkEmail4 );
 
 function checkEmailValidity( email ) {
     let mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    if ( email.match( mailformat ) ) {
-        return email.match(mailformat);
-    }
+    return !!email.match(mailformat);
 }
 
 const validEmail = checkEmailValidity("n.eeken@novi.nl");
